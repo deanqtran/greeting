@@ -1,6 +1,12 @@
-var utils  = require('course-utilities');
-var hello = utils.load('./hello.js', 'hello');
+//var utils  = require('course-utilities');
+//var hello = utils.load('./hello.js', 'hello');
+const sayHelloWorld = require('./hello');
 
-test('outputs the correct string', () => {
-  expect(hello()).toBe("Hello World!");
+
+describe('sayHi', () => {
+
+	// Test 1
+	it('expecting:', () => {
+		expect(sayHelloWorld()).toContain('Hello World!');
+	});
 });
